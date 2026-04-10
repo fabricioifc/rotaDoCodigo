@@ -1,0 +1,144 @@
+
+:root {
+  --bg-dark: #02080D;
+  --text-light: #ffffff;
+  --text-muted: #94a3b8;
+  --btn-blue: #6699dd;
+}
+
+.projects-section {
+  width: 100%;
+  padding: 100px 20px;
+  background: var(--bg-dark); 
+  color: var(--text-light);
+  text-align: left;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.projects-header {
+  margin-bottom: 80px;
+  
+}
+
+.projects-header h2 {
+  color: var(--text-light);
+  margin: 0;
+   font-size: 72px;
+  line-height: 1.05;
+  margin-bottom: 25px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+  
+
+
+/* GRID */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 80px;
+  text-align: left;
+}
+
+/* CARD */
+.card {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 16px;
+  padding: 15px;
+  margin: -15px;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.02);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* IMAGE */
+.card-image {
+  width: 100%;
+  height: 280px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 25px;
+}
+
+/* CONTENT */
+.card-content {
+  padding: 0;
+}
+
+.card-content h3 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-light);
+  margin: 0 0 15px 0;
+  letter-spacing: -0.02em;
+}
+
+.card-content p {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* SEE MORE BUTTON */
+.explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 40px;
+  background: var(--btn-blue);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: #5588cc;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(102, 153, 221, 0.3);
+}
+
+.explore-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects-header h2 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .projects-header h2 {
+    font-size: 36px;
+  }
+  .card-image {
+    height: 240px;
+  }
+}
