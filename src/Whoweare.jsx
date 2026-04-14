@@ -1,17 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import "./whoWeAre.css";
+import imagem1 from "/willian.jpeg";
+import imagem6 from "/aninha.jpeg";
+import imagem10 from "/prof.jpeg";
+import imagem11 from "/leti.jpeg";
+
 
 const people = [
   {
-    src: "https://picsum.photos/seed/fabricio/400/400",
+    src: imagem10,
     name: "Fabricio Bizotto",
   },
   {
-    src: "https://picsum.photos/seed/willian/400/400",
+    src: imagem1,
     name: "Willian Moreira",
   },
-  { src: "https://picsum.photos/seed/aninha/400/400", name: "Ana Paula Deon" },
-  { src: "https://picsum.photos/seed/leti/400/400", name: " Leticia Macalina" },
+  { src: imagem6, name: "Ana Paula Deon" },
+  { src: imagem11, name: " Leticia Macalina" },
 ];
 
 export default function AboutSection() {

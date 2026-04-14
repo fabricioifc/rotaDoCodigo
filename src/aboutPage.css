@@ -1,0 +1,159 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FUNDO COM GRADIENTE */
+.about-page {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0a1620, #02080d);
+  color: #ffffff;
+  padding: 100px 20px;
+}
+
+/* CONTAINER */
+.about-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* TÍTULO */
+.about-page-title {
+  font-size: 52px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #ffffff, #6699dd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* INTRO */
+.about-page-intro {
+  max-width: 750px;
+  margin-bottom: 100px;
+}
+
+.about-page-intro p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #a1a1aa;
+  margin-bottom: 20px;
+}
+
+/* CARD DO TIME */
+.about-page-team-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  margin-bottom: 120px;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+/* HOVER CARD */
+.about-page-team-section:hover {
+  transform: translateY(-8px);
+  background: rgba(102, 153, 221, 0.05);
+}
+
+/* TEXTO */
+.team-info {
+  flex: 1;
+}
+
+.team-name {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.team-description p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #a1a1aa;
+  margin-bottom: 12px;
+}
+
+/* IMAGEM */
+.team-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* FOTO COM EFEITO */
+.team-circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  border: 3px solid transparent;
+  background: linear-gradient(#02080d, #02080d) padding-box,
+              linear-gradient(135deg, #6699dd, #ffffff) border-box;
+  transition: all 0.4s ease;
+}
+
+/* GLOW */
+.team-circle::after {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  background: radial-gradient(circle, rgba(102,153,221,0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.team-circle:hover::after {
+  opacity: 1;
+}
+
+/* IMAGEM */
+.team-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: all 0.4s ease;
+}
+
+.team-circle:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.08);
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .about-page {
+    padding: 60px 20px;
+  }
+
+  .about-page-title {
+    font-size: 38px;
+    text-align: center;
+  }
+
+  .about-page-intro {
+    text-align: center;
+    margin: 0 auto 60px;
+  }
+
+  .about-page-team-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .team-circle {
+    width: 180px;
+    height: 180px;
+  }
+}

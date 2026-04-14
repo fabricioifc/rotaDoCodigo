@@ -7,12 +7,10 @@
   position: relative;
 }
 
-
 .ap-container {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 
 .ap-grid {
   display: grid;
@@ -20,7 +18,6 @@
   align-items: center;
   gap: 80px;
 }
-
 
 /* LEFT CONTENT */
 .ap-tag {
@@ -33,7 +30,6 @@
   text-transform: uppercase;
 }
 
-
 .ap-title {
   font-size: 56px;
   line-height: 1.1;
@@ -43,13 +39,11 @@
   letter-spacing: -0.03em;
 }
 
-
 .ap-text-group {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 29px;
 }
-
 
 .ap-text-group p {
   font-size: 18px;
@@ -58,89 +52,40 @@
   margin: 0;
 }
 
-
 .ap-lead {
   font-weight: 700;
   color: #ffffff !important;
 }
 
-
 .ap-text-group strong {
   color: #6699dd;
 }
 
-
 /* RIGHT ILLUSTRATION */
 .ap-illustration {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-
 .illustration-wrapper {
-  position: relative;
-  width: 100%;
+  position: absolute;
+  right: -0px; /* joga pra fora do container */
+  top: 50%;
+  transform: translateY(-50%);
   max-width: 500px;
 }
 
-
 .main-img {
   width: 100%;
+  max-width: 400px; /* controla o tamanho */
   height: auto;
-  border-radius: 24px;
-  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15);
   position: relative;
   z-index: 2;
-  filter: grayscale(100%); /* Matching the black and white people in the image */
-  transition: filter 0.5s ease;
+  transition: transform 0.5s ease;
+  margin-left: 0; /* remove isso */
 }
-
-
 .main-img:hover {
-  filter: grayscale(0%);
+  transform: translateY(-10px) scale(1.05);
 }
-
-
-/* DECORATIVE SHAPES (Mimicking the artistic style) */
-.shape {
-  position: absolute;
-  z-index: 1;
-  border-radius: 50%;
-  opacity: 0.8;
-}
-
-
-.shape-1 {
-  width: 300px;
-  height: 300px;
-  background: #a855f7; /* Purple shape */
-  top: -40px;
-  right: -40px;
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-}
-
-
-.shape-2 {
-  width: 200px;
-  height: 200px;
-  background: #f59e0b; /* Orange shape */
-  bottom: -30px;
-  left: -50px;
-  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-}
-
-
-.shape-3 {
-  width: 150px;
-  height: 150px;
-  background: #3b82f6; /* Blue shape */
-  bottom: 40px;
-  right: -20px;
-  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-}
-
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
@@ -151,7 +96,6 @@
     gap: 40px;
   }
 }
-
 
 @media (max-width: 900px) {
   .about-project {
@@ -171,5 +115,3 @@
     max-width: 400px;
   }
 }
-
-

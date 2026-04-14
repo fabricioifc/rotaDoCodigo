@@ -62,15 +62,15 @@ export default function Footer() {
             <ul>
               <li>
                 <FaMapMarkerAlt size={18} className="icon" />
-                <span>São Paulo, SP - Brasil</span>
+                <span>Videira, SC - Brasil</span>
               </li>
               <li>
                 <FaPhoneAlt size={18} className="icon" />
-                <span>+55 (11) 99999-9999</span>
+                <span>+55 (49) 99999-9999</span>
               </li>
               <li>
                 <FaEnvelope size={18} className="icon" />
-                <span>contato@rotadocodigo.com.br</span>
+                <span>rotadocodigo@gmail.com</span>
               </li>
             </ul>
           </div>

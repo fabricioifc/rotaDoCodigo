@@ -8,7 +8,7 @@ import ContactPage from "./contactPage";
 import { Routes, Route } from "react-router-dom";
 import CTASetcion from "./CTASetcion";
 import GallerySection from "./GallerySection";
-
+import AboutPage from "./AboutPage";
 
 
 function Home() {
@@ -32,6 +32,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contato" element={<ContactPage />} />
         <Route path="/galeria" element={<GallerySection />} />
+        <Route path="/aboutpage" element={<AboutPage />} />
       </Routes>
 
       <Footer />
