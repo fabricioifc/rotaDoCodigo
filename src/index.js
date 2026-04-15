@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename={import.meta.env.VITE_BASE_PATH || "/"}>
     <App />
   </BrowserRouter>
 );;
