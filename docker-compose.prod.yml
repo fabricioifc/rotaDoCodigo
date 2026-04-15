@@ -12,3 +12,9 @@ services:
     # ports:
     #   - "${APP_PORT:-8080}:80"
     restart: unless-stopped
+    networks:
+      - fabrica-network
+
+networks:
+  fabrica-network:
+    external: true
