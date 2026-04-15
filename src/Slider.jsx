@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./slider.css";
 
 const slides = [
@@ -59,15 +60,16 @@ export default function Slider() {
         {/* TEXTO */}
         <div className="hero-text">
           <div
-            className={`slide-content ${
-              isTransitioning ? "slide-entering" : "slide-visible"
-            }`}
+            className={`slide-content ${isTransitioning ? "slide-entering" : "slide-visible"
+              }`}
           >
             <h1>{slide.title}</h1>
             <p>{slide.description}</p>
             <div className="hero-actions">
               <button className="btn-primary">{slide.button}</button>
-              <button className="btn-secondary">Saiba mais</button>
+              <Link to="/">
+                <button className="btn-secondary">Saiba mais</button>
+              </Link>
             </div>
           </div>
 
@@ -78,7 +80,7 @@ export default function Slider() {
             </div>
             <div className="stat-divider" />
             <div className="stat-item">
-              <span className="stat-value">10+</span>
+              <span className="stat-value">6+</span>
               <span className="stat-label">Escolas Parceiras</span>
             </div>
             <div className="stat-divider" />
@@ -103,7 +105,7 @@ export default function Slider() {
           <div className="cube-wrapper pos-bot-pink">
             <Cube color="pink" />
           </div>
-          
+
           {/* NEW CUBES FOR FILLING */}
           <div className="cube-wrapper pos-extra-1 scale-50">
             <Cube color="orange" />

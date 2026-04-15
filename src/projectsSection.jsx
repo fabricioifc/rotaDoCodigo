@@ -2,19 +2,19 @@ import "./projectsSection.css";
 
 const projects = [
   {
-    title: "Traditional",
-    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
-    img: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+    title: "Ensino Médio",
+    desc: "A Rota do Código prepara os alunos para o futuro com programação, desenvolvendo pensamento lógico, autonomia e habilidades para o mercado digital.",
+    img: "https://plus.unsplash.com/premium_vector-1720549705152-1810209290fb?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    title: "Modern",
-    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
-    img: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+    title: "Ensino Fundamental",
+    desc: "Introduzimos a programação de forma criativa, estimulando raciocínio lógico, curiosidade e interesse pela tecnologia desde cedo.",
+    img: "https://plus.unsplash.com/premium_vector-1721050873642-00c0eba9ca9b?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    title: "Minimalism",
-    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
-    img: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+    title: "Educação de Jovens e Adultos",
+    desc: "Promovemos inclusão digital por meio da programação, abrindo novas oportunidades e mostrando que nunca é tarde para aprender.",
+    img: "https://plus.unsplash.com/premium_vector-1720780253928-30e5874d41ee?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YWRvc2xlY2VudGV8ZW58MHx8MHx8fDA%3D",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function ProjectsSection() {
           ))}
         </div>
 
-       
+
       </div>
     </section>
   );

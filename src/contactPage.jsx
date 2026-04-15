@@ -163,18 +163,31 @@ export default function ContactPage() {
               <span className="contact-tag">CONTATO</span>
               <h1>Fale Conosco</h1>
               <p>
-                Vamos construir algo incrível juntos. Tem um projeto em mente, uma dúvida ou precisa de orientação? Estamos aqui para ajudar.
+                Vamos construir algo incrível juntos. Tem um projeto em mente,
+                uma dúvida ou precisa de orientação? Estamos aqui para ajudar.
               </p>
             </div>
 
             <div className="contact-hero-visual">
               <div className="floating-icons-grid">
-                <div className="f-icon-item"><Code size={32} /></div>
-                <div className="f-icon-item"><Cpu size={32} /></div>
-                <div className="f-icon-item"><Globe size={32} /></div>
-                <div className="f-icon-item"><Sparkles size={32} /></div>
-                <div className="f-icon-item"><Terminal size={32} /></div>
-                <div className="f-icon-item"><Laptop size={32} /></div>
+                <div className="f-icon-item">
+                  <Code size={32} />
+                </div>
+                <div className="f-icon-item">
+                  <Cpu size={32} />
+                </div>
+                <div className="f-icon-item">
+                  <Globe size={32} />
+                </div>
+                <div className="f-icon-item">
+                  <Sparkles size={32} />
+                </div>
+                <div className="f-icon-item">
+                  <Terminal size={32} />
+                </div>
+                <div className="f-icon-item">
+                  <Laptop size={32} />
+                </div>
               </div>
             </div>
           </div>
@@ -190,45 +203,97 @@ export default function ContactPage() {
             </div>
 
             <form className="contact-form" onSubmit={handleOnSubmit} noValidate>
-              <input type="hidden" name="_subject" value="Novo contato pelo site" />
+              <input
+                type="hidden"
+                name="_subject"
+                value="Novo contato pelo site"
+              />
 
               <div className="form-grid">
-
-                <div className={`form-group ${touched.name && errors.name ? 'invalid' : ''}`}>
+                <div
+                  className={`form-group ${touched.name && errors.name ? "invalid" : ""}`}
+                >
                   <label>Nome *</label>
-                  <input id="name" name="name" value={inputs.name} onChange={handleOnChange} onBlur={handleBlur}/>
-                  {touched.name && errors.name && <span className="error-message">{errors.name}</span>}
+                  <input
+                    id="name"
+                    name="name"
+                    value={inputs.name}
+                    onChange={handleOnChange}
+                    onBlur={handleBlur}
+                  />
+                  {touched.name && errors.name && (
+                    <span className="error-message">{errors.name}</span>
+                  )}
                 </div>
 
-                <div className={`form-group ${touched.email && errors.email ? 'invalid' : ''}`}>
+                <div
+                  className={`form-group ${touched.email && errors.email ? "invalid" : ""}`}
+                >
                   <label>Email *</label>
-                  <input id="email" name="email" value={inputs.email} onChange={handleOnChange} onBlur={handleBlur}/>
-                  {touched.email && errors.email && <span className="error-message">{errors.email}</span>}
+                  <input
+                    id="email"
+                    name="email"
+                    value={inputs.email}
+                    onChange={handleOnChange}
+                    onBlur={handleBlur}
+                  />
+                  {touched.email && errors.email && (
+                    <span className="error-message">{errors.email}</span>
+                  )}
                 </div>
 
-                <div className={`form-group ${touched.phone && errors.phone ? 'invalid' : ''}`}>
+                <div
+                  className={`form-group ${touched.phone && errors.phone ? "invalid" : ""}`}
+                >
                   <label>Telefone *</label>
-                  <input id="phone" name="phone" value={inputs.phone} onChange={handleOnChange} onBlur={handleBlur}/>
-                  {touched.phone && errors.phone && <span className="error-message">{errors.phone}</span>}
+                  <input
+                    id="phone"
+                    name="phone"
+                    value={inputs.phone}
+                    onChange={handleOnChange}
+                    onBlur={handleBlur}
+                  />
+                  {touched.phone && errors.phone && (
+                    <span className="error-message">{errors.phone}</span>
+                  )}
                 </div>
 
-                <div className={`form-group ${touched.subject && errors.subject ? 'invalid' : ''}`}>
+                <div
+                  className={`form-group ${touched.subject && errors.subject ? "invalid" : ""}`}
+                >
                   <label>Assunto *</label>
-                  <select id="subject" name="subject" value={inputs.subject} onChange={handleOnChange} onBlur={handleBlur}>
+                  <select
+                    id="subject"
+                    name="subject"
+                    value={inputs.subject}
+                    onChange={handleOnChange}
+                    onBlur={handleBlur}
+                  >
                     <option value="">Selecione</option>
                     <option value="escola">Escola</option>
                     <option value="curso">Curso</option>
                     <option value="outro">Outro</option>
                   </select>
-                  {touched.subject && errors.subject && <span className="error-message">{errors.subject}</span>}
+                  {touched.subject && errors.subject && (
+                    <span className="error-message">{errors.subject}</span>
+                  )}
                 </div>
-
               </div>
 
-              <div className={`form-group full-width ${touched.message && errors.message ? 'invalid' : ''}`}>
+              <div
+                className={`form-group full-width ${touched.message && errors.message ? "invalid" : ""}`}
+              >
                 <label>Mensagem *</label>
-                <textarea id="message" name="message" value={inputs.message} onChange={handleOnChange} onBlur={handleBlur}/>
-                {touched.message && errors.message && <span className="error-message">{errors.message}</span>}
+                <textarea
+                  id="message"
+                  name="message"
+                  value={inputs.message}
+                  onChange={handleOnChange}
+                  onBlur={handleBlur}
+                />
+                {touched.message && errors.message && (
+                  <span className="error-message">{errors.message}</span>
+                )}
               </div>
 
               <div className="form-footer">
@@ -238,18 +303,31 @@ export default function ContactPage() {
                   Eu concordo em compartilhar meus dados.
                 </label>
 
-                <button type="submit" className="submit-btn" disabled={status.submitting}>
-                  {status.submitting ? "Enviando..." : status.submitted ? "Enviado!" : "Enviar Mensagem"}
+                <button
+                  type="submit"
+                  className="submit-btn"
+                  disabled={status.submitting}
+                >
+                  {status.submitting
+                    ? "Enviando..."
+                    : status.submitted
+                      ? "Enviado!"
+                      : "Enviar Mensagem"}
                 </button>
               </div>
 
               {status.info.msg && (
-                <div className={`form-status ${status.info.error ? 'error' : 'success'}`}>
-                  {status.info.error ? <FaExclamationCircle /> : <FaCheckCircle />}
+                <div
+                  className={`form-status ${status.info.error ? "error" : "success"}`}
+                >
+                  {status.info.error ? (
+                    <FaExclamationCircle />
+                  ) : (
+                    <FaCheckCircle />
+                  )}
                   {status.info.msg}
                 </div>
               )}
-
             </form>
           </div>
         </div>
@@ -258,28 +336,34 @@ export default function ContactPage() {
       <div className="contact-info-grid-section">
         <div className="container">
           <div className="info-grid">
-
             <div className="info-item">
-              <div className="info-icon"><FaPhoneAlt /></div>
-              <h3>Ligue para nós</h3>
+              <div className="info-icon">
+                <FaPhoneAlt />
+              </div>
+              <h3>Contato</h3>
               <p>Segunda a Sexta, das 9h às 18h</p>
               <a href="tel:+5511999999999">+55 (11) 99999-9999</a>
             </div>
 
             <div className="info-item">
-              <div className="info-icon"><FaMapMarkerAlt /></div>
-              <h3>Nosso Escritório</h3>
+              <div className="info-icon">
+                <FaMapMarkerAlt />
+              </div>
+              <h3>Instituto Federal Catarinense</h3>
               <p>Venha nos visitar</p>
-              <span>São Paulo, SP - Brasil</span>
+              <span>Videira, SC - Brasil</span>
             </div>
 
             <div className="info-item">
-              <div className="info-icon"><FaEnvelope /></div>
+              <div className="info-icon">
+                <FaEnvelope />
+              </div>
               <h3>Email</h3>
               <p>Mande uma mensagem</p>
-              <a href="mailto:contato@rotadocodigo.com.br">contato@rotadocodigo.com.br</a>
+              <a href="mailto:rotadocodigo@gmail.com.br">
+                rotadocodigo@gmail.com.br
+              </a>
             </div>
-
           </div>
         </div>
       </div>
