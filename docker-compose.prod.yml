@@ -1,6 +1,6 @@
 services:
   web:
-    # image: rota-do-codigo-prod
+    image: rota-do-codigo-prod
     container_name: rota-do-codigo-web
     build:
       context: .
